@@ -1,0 +1,22 @@
+[package]
+name = "simple-uploader"
+version = "0.1.0"
+authors = ["Wixe <wixe@ya.ru>"]
+edition = "2018"
+links = "links"
+
+[build-dependencies]
+bindgen = "0.53.2"
+cc = "1.0"
+
+[dependencies]
+warp = "0.2.2"
+tokio = { version = "0.2", features = ["macros", "fs"] }
+futures = "0.3"
+bytes = "0.5"
+serde   = { version =  "1.0.103", features = ["derive"] }
+base64 = "0.12"
+libc = "0.2"
+regex = "1"
+lazy_static = "1.4.0"
+horrorshow = "0.8.3"

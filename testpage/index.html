@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Upload Image</title>
+        <style>
+            .clmn {
+                flex: auto;
+            }
+
+            .row {
+                display: flex;
+                flex-direction: row;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Upload image</h1>
+        <a href="/images">Uploaded images</a>
+        <div class="row">
+            <div class="clmn">
+                <h1> multipat/form-data </h1>
+                <form action="/upload_image" method="post" enctype="multipart/form-data">
+                    <label for="multipart-files">Select images:</label>
+                    <input type="file"
+                           id="multipart-files"
+                           name="multipart-files"
+                           accept="image/*"
+                           multiple
+                    ><br><br>
+                    <input type="submit" value="Upload">
+                </form>
+            </div>
+            <div class="clmn">
+                <h1> base64 json </h1>
+                <label for="multipart-files">Select images:</label>
+                <input type="file"
+                       id="json-files"
+                       accept="image/*"
+                       multiple
+                ><br><br>
+                <button id="json-send-btn">Upload</button><br><br>
+                <div id="json-upload-status"></div>
+            </div>
+        </div>
+        <script src="/script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+version: '3.7'
+services:
+  backend:
+    build:
+      context: '.'
+      dockerfile: "Dockerfile-dev"
+    image: "uploader:dev"
+    environment:
+      WEB_ROOT: "/app/testpage"
+    volumes:
+      - type: bind
+        source: .
+        target: "/app"
+      - type: volume
+        source: cargo-cache
+        target: "/target"
+      - type: volume
+        source: cargo-registry
+        target: "/usr/local/cargo/registry"
+    tty: true
+
+volumes:
+  cargo-cache:
+  cargo-registry:
