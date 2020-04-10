@@ -1,5 +1,5 @@
 # Simple image uploader server in rust
-This repo contains an example of simple asynchronous http server written in rust using [`tokio`](https://github.com/tokio-rs/tokio) and [`warp` framework](https://github.com/seanmonstar/warp). In order to run the server you only need `docker` and `docker-compose`.
+This repo contains an example of a simple asynchronous http server written in rust using [`tokio`](https://github.com/tokio-rs/tokio) and [`warp` framework](https://github.com/seanmonstar/warp). In order to run the server you only need `docker` and `docker-compose`.
 There are separate dockerfiles for development and production mode since they have different workflow and requirements.
 This project uses `ffi` bindings to [`stb` C library](https://github.com/nothings/stb) and has quite a bit of `unsafe` rust code.
 
